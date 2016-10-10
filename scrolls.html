@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Scrolls | Homepage</title>
+
+  <!-- Behavioral Meta Data -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="styles/styles.css"/> 
+
+</head>
+<body>
+ <div class="headContainer">
+
+  <p class="akgec"><span><img src="images/akgec-logo.png">Ajay Kumar Garg Engineering College</span></p>
+</div>
+<div class="pencilContainer">
+  <ul id="pencil" class="scene border fill">
+    <li class="layer expand-width" data-depth="7"><img src="images/pencil.png" class="pencil"></li>
+  </ul>
+</div>
+
+<div class="clockContainer">
+ <svg id="svg" class="clock"></svg>
+        <div class="timerContainer">
+          <div id="countdown"></div>             
+        </div>    
+</div>
+
+
+
+<div id="container" class="container">
+  <ul id="scene" class="scene border fill">
+    <li class="layer expand-width" data-depth="1.4"><img src="images/env.png" class="envelope"></li>
+    <li class="layer expand-width" data-depth="0"><img src="images/notepad.png" class=""></li>    
+  </ul>
+</div>
+
+<!-- Scripts -->
+<script src="deploy/parallax.js"></script>
+<script>
+
+  // Nothing new here...it's all in the CSS!
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  var pencil = document.getElementById('pencil');
+  var parallax = new Parallax(pencil);
+
+</script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://snapsvg.io/assets/js/snap.svg-min.js'></script>
+
+<script src="js/index.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+
+  <script type="text/javascript">
+  $('#countdown').countdown('2015/09/14', function(event) {
+    $(this).html(event.strftime('%d days <br /> %H:%M:%S'));
+  });
+</script>
+
+</body>
+
+
+
+</html>
